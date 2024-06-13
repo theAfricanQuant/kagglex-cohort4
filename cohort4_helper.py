@@ -81,8 +81,7 @@ def prep_data(df):
             clean_title=lambda x: x['clean_title'].apply(lambda val: 1 if val == 'Yes' else 0)
         )
         
-        # Log transform the target variable
-        .assign(price=lambda x: np.log1p(x['price']))
+        
     )
 
 
